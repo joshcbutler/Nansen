@@ -12,7 +12,11 @@ var session = require('express-session');
 var CurrentUser = {};
 
 // supply a session 'secret' to hash the session (security measure)
-app.use(session({secret: "mySecret"}));
+app.use(session({
+  secret: "mySecret",
+  resave: true,
+  saveUninitialized: true
+}));
 // initialize the passport middleware
 app.use(passport.initialize());
 app.use(passport.session());
