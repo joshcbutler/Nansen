@@ -14,10 +14,10 @@ module.exports = {
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": "",
+    "username": "b0345c543bfb39",
+    "password": "4985e592",
     "database": "Nansen",
-    "host": "mysql://b0345c543bfb39:4985e592@us-cdbr-iron-east-05.cleardb.net",
+    "host": "mysql://us-cdbr-iron-east-05.cleardb.net/heroku_042fc660d71329f",
     "dialect": "mysql"
   }
 };
