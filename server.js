@@ -36,7 +36,7 @@ passport.deserializeUser(function(user, done) {
 passport.use(new GoogleStrategy({
     clientID: "440677098615-i4n1hiqtg810eglrsa810799q6kduatr.apps.googleusercontent.com",
     clientSecret: "YqVPUeNuejPk3vxiWHLVx7tQ",
-    callbackURL: "http://localhost:3000/auth/google/callback"
+    callbackURL: "http://sheltered-brushlands-84879.herokuapp.com/auth/google/callback"
   },
   function(accessToken, refreshToken, profile, cb) {
 			// console.log(accessToken);
