@@ -1,4 +1,4 @@
-{
+module.exports = {
   "development": {
     "username": "root",
     "password": "",
@@ -17,7 +17,7 @@
     "username": "root",
     "password": "",
     "database": "Nansen",
-    "host": "b0345c543bfb39:4985e592@us-cdbr-iron-east-05.cleardb.net/heroku_042fc660d71329f",
+    "host": process.env.CLEARDB_DATABASE_URL,
     "dialect": "mysql"
   }
-}
+};
