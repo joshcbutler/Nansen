@@ -1,5 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
-  var Stamps = sequelize.define("Stamps", {
+  var Stamps = sequelize.define("Stamp", {
     UID: {
       type: DataTypes.STRING,
       notNull: true,
