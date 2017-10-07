@@ -15,6 +15,8 @@ module.exports = function (sequelize, DataTypes) {
       notNull: true,
       notEmpty: true
     }
+  }, {
+    tableName: "Stamps"
   });
   return Stamps;
 };
