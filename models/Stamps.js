@@ -16,7 +16,14 @@ module.exports = function (sequelize, DataTypes) {
       notEmpty: true
     }
   }, {
-    tableName: "Stamps"
+    tableName: "Stamps",
+    indexes: [
+      // Create a unique index on email
+      {
+        unique: true,
+        fields: ['email']
+      }
+    ]
   });
   return Stamps;
 };
