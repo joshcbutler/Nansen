@@ -14,13 +14,7 @@ module.exports = {
     "dialect": "mysql"
   },
   "production": {
-    "username": "b0345c543bfb39",
-    "password": "4985e592",
-    "database": "heroku_042fc660d71329f",
-    "host": "us-cdbr-iron-east-05.cleardb.net",
-    "dialect": "mysql",
-    "pool": {
-      "evict": 0
-    }
+    "use.env.variable": "JAWSDB_URL",
+    "dialect": "mysql"
   }
 };
