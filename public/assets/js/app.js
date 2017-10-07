@@ -14,19 +14,14 @@ function refreshItinerary() {
                 }).done(function(response){
                         var itineraryDiv = $("<div>");
                         for (var i = 0; i < response.length; i++) {
-                            for (var prop in response[i]) {
-                                if (prop === 'country_Dest') {
-                                    var include = response[i][prop];
-                                    var countryButton = $("<a>")
-                                    if ($("#itinerary-div").find(countryButton.attr("id", include)).length === 0){
-                                        countryButton.attr("id", include);
-                                        countryButton.text(include);
-                                        itineraryDiv.append(countryButton);
-                                        itineraryDiv.append($("<br>"));
-                                    };
-                                };
-                            };
-                        };
+                            var countryButton = $("<a>")
+                            if ($("#itinerary-div").find(countryButton.attr("id", response[i].id)).length === 0) {
+                                countryButton.attr("id", response[i].id);
+                                countryButton.text(response[i].itinerary_Item + ", " + response[i].country_Dest);
+                                itineraryDiv.append(countryButton);
+                                itineraryDiv.append($("<br>"));
+                            }
+                        }
                         $("#itinerary-div").html(itineraryDiv);
                     });
                 });
@@ -62,35 +57,17 @@ searchButton.on("click", function () {
             var name4 = yelps[3].name;
             var name5 = yelps[4].name;
 
-            var image1 = yelps[0].image_url;
-
             $(".checkbox1").prop("value", name1);
             $(".checkbox2").prop("value", name2);
             $(".checkbox3").prop("value", name3);
             $(".checkbox4").prop("value", name4);
             $(".checkbox5").prop("value", name5);
 
-            var image1 = $("<img>");
-            var image2 = $("<img>");
-            var image3 = $("<img>");
-            var image4 = $("<img>");
-            var image5 = $("<img>");
-
-            image1.css({
-                "height": "60vh"
-            });
-            image2.css({
-                "height": "60vh"
-            });
-            image3.css({
-                "height": "60vh"
-            });
-            image4.css({
-                "height": "60vh"
-            });
-            image5.css({
-                "height": "60vh"
-            });
+            var image1 = $("<img class='yelp-result-image'>");
+            var image2 = $("<img class='yelp-result-image'>");
+            var image3 = $("<img class='yelp-result-image'>");
+            var image4 = $("<img class='yelp-result-image'>");
+            var image5 = $("<img class='yelp-result-image'>");
 
             $("#boxCountry").data("country", country);
             image1.attr("src", yelps[0].image_url);
@@ -105,11 +82,17 @@ searchButton.on("click", function () {
             $("#display4").html(image4);
             $("#display5").html(image5);
 
-            $("#displayname1").html(name1);
-            $("#displayname2").html(name2);
-            $("#displayname3").html(name3);
-            $("#displayname4").html(name4);
-            $("#displayname5").html(name5);
+            $("#displayname1").text(name1);
+            $("#displayname2").text(name2);
+            $("#displayname3").text(name3);
+            $("#displayname4").text(name4);
+            $("#displayname5").text(name5);
+
+            $("#displayaddress1").text(yelps[0].location.display_address);
+            $("#displayaddress2").text(yelps[1].location.display_address);
+            $("#displayaddress3").text(yelps[2].location.display_address);
+            $("#displayaddress4").text(yelps[3].location.display_address);
+            $("#displayaddress5").text(yelps[4].location.display_address);
         }
     });
 });

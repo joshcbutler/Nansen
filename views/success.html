@@ -9,11 +9,13 @@
     <meta name="author">
     <!-- Style Sheets -->
     <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/css/foundation.min.css" integrity="sha256-itWEYdFWzZPBG78bJOOiQIn06QCgN/F0wMDcC4nOhxY=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/css/foundation.min.css" integrity="sha256-itWEYdFWzZPBG78bJOOiQIn06QCgN/F0wMDcC4nOhxY="
+        crossorigin="anonymous" />
     <link rel="stylesheet" href="/assets/css/app.css" />
     <link rel="stylesheet" href="/assets/css/slideshow.css" />
     <link rel="stylesheet" href="/assets/css/navbar.css" />
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
 </head>
 
 <ul class="slideshow">
@@ -52,7 +54,7 @@
                                         <div class="divider">&nbsp;</div>
                                         <label for="findlocate">Find</label>
                                         <input id="findlocate" placeholder="Tourist Attractions" class="hero-search-filter-form-near" type="text" />
-                                        <button id="search-button" class="button"><i class="fa fa-search">Search</i></button>
+                                        <button id="search-button" class="button search-button"><i class="fa fa-search">Search</i></button>
                                     </form>
 
                                 </div>
@@ -64,8 +66,10 @@
         </div>
         <div class="row">
             <div id="information-div" class="medium-12 columns">
-                <p>Nansen allows you to search for things in the area of your choosing, and stamp your passport when you visit new countries.</p><br>
-                <p>Use the search bar at the top of the screen in order to find things to do, and save the things you want to your itinerary.</p><br>
+                <p>Nansen allows you to search for things in the area of your choosing, and stamp your passport when you visit
+                    new countries.</p><br>
+                <p>Use the search bar at the top of the screen in order to find things to do, and save the things you want to
+                    your itinerary.</p><br>
                 <p>Click the GeoLocation button in order to stamp your passport with your current location.</p>
             </div>
         </div>
@@ -84,59 +88,56 @@
         </div>
         <!--Modal-->
         <div class="container"></div>
-        <div class="reveal" id="new_Modal_1" data-reveal>
+        <div class="reveal yelp-result-container" id="new_Modal_1" data-reveal>
             <div id="boxCountry"></div>
-            <div class="check" id="box1">
-                <input class="yelp-selection checkbox1" type="checkbox" name="location1">
-                <br>
-                <div id="display1"></div> &nbsp &nbsp &nbsp
-                <div id="displayname1"></div>
+            <div class="check yelp-result" id="box1">
+                <div class="image-container" id="display1"></div>
+                <div class="yelp-info-container">
+                    <div class="yelp-name" id="displayname1"></div>
+                    <div id="displayaddress1"></div>
+                    <input class="yelp-selection checkbox1" type="checkbox" name="location1">
+                </div>
             </div>
-
-            <br> <br> <br>
-
-            <div class="check" id="box2">
-                <input class="yelp-selection checkbox2" type="checkbox" name="location2">
-                <br>
-                <div id="display2"></div> &nbsp &nbsp &nbsp
-                <div id="displayname2"></div>
+            <div class="check yelp-result" id="box2">
+                <div class="image-container" id="display2"></div>
+                <div class="yelp-info-container">
+                    <div class="yelp-name" id="displayname2"></div>
+                    <div id="displayaddress2"></div>
+                    <input class="yelp-selection checkbox2" type="checkbox" name="location2">
+                </div>
             </div>
-
-            <br> <br> <br>
-
-            <div class="check" id="box3">
-                <input class="yelp-selection checkbox3" type="checkbox" name="location3">
-                <br>
-                <div id="display3"></div> &nbsp &nbsp &nbsp
-                <div id="displayname3"></div>
+            <div class="check yelp-result" id="box3">
+                <div class="image-container" id="display3"></div>
+                <div class="yelp-info-container">
+                    <div class="yelp-name" id="displayname3"></div>
+                    <div id="displayaddress3"></div>
+                    <input class="yelp-selection checkbox3" type="checkbox" name="location3">
+                </div>
             </div>
-
-            <br> <br> <br>
-
-            <div class="check" id="box4">
-                <input class="yelp-selection checkbox4" type="checkbox" name="location4">
-                <br>
-                <div id="display4"></div> &nbsp &nbsp &nbsp
-                <div id="displayname4"></div>
+            <div class="check yelp-result" id="box4">
+                <div class="image-container" id="display4"></div>
+                <div class="yelp-info-container">
+                    <div class="yelp-name" id="displayname4"></div>
+                    <div id="displayaddress4"></div>
+                    <input class="yelp-selection checkbox4" type="checkbox" name="location4">
+                </div>
             </div>
-
-            <br> <br> <br>
-
-            <div class='check' id="box5">
-                <input class="yelp-selection checkbox5" type="checkbox" name="location5">
-                <br>
-                <div id="display5"></div> &nbsp &nbsp
-                <div id="displayname5"></div>
+            <div class="check yelp-result" id="box5">
+                <div class="image-container" id="display5"></div>
+                <div class="yelp-info-container">
+                    <div class="yelp-name" id="displayname5"></div>
+                    <div id="displayaddress5"></div>
+                    <input class="yelp-selection checkbox5" type="checkbox" name="location5">
+                </div>
             </div>
-
-            <br> <br> <br>
-            <a id="submit-yelps" class="button expand">Add Items to Itinerary</a>
+            <a id="submit-yelps" class="search-button button expand">Add Items to Itinerary</a>
             <!--<button id="submit-yelps">Add Items to Itinerary</button>-->
             <button id="modal-close-button" class="close-button" data-close aria-label="Close modal" type="button">
                 <span aria-hidden="true">&times;</span>
             </button>
         </div>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/js/foundation.min.js" integrity="sha256-Nd2xznOkrE9HkrAMi4xWy/hXkQraXioBg9iYsBrcFrs=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/js/foundation.min.js" integrity="sha256-Nd2xznOkrE9HkrAMi4xWy/hXkQraXioBg9iYsBrcFrs="
+            crossorigin="anonymous"></script>
         <script>
             $(document).foundation();
         </script>
