@@ -16,8 +16,8 @@ module.exports = {
   "production": {
     "username": "b0345c543bfb39",
     "password": "4985e592",
-    "database": "Nansen",
-    "host": "us-cdbr-iron-east-05.cleardb.net/heroku_042fc660d71329f",
+    "database": "heroku_042fc660d71329f",
+    "host": "us-cdbr-iron-east-05.cleardb.net",
     "dialect": "mysql"
   }
 };
