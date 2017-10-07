@@ -18,6 +18,9 @@ module.exports = {
     "password": "4985e592",
     "database": "heroku_042fc660d71329f",
     "host": "us-cdbr-iron-east-05.cleardb.net",
-    "dialect": "mysql"
+    "dialect": "mysql",
+    "pool": {
+      "evict": 0
+    }
   }
 };
