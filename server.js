@@ -102,7 +102,7 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 db.sequelize.sync({ force: true }).then(function() {
-  app.listen(3000, function() {
+  app.listen(process.env.PORT || 3000, function() {
     console.log('Server listening on localhost:3000')
   });
 });
