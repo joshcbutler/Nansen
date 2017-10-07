@@ -17,7 +17,7 @@
     "username": "root",
     "password": "",
     "database": "Nansen",
-    "host": "mysql://b0345c543bfb39:4985e592@us-cdbr-iron-east-05.cleardb.net/heroku_042fc660d71329f?reconnect=true",
+    "host": "b0345c543bfb39:4985e592@us-cdbr-iron-east-05.cleardb.net/heroku_042fc660d71329f",
     "dialect": "mysql"
   }
 }
